@@ -1,0 +1,582 @@
+/**
+Theme Name: FASTra
+Theme URI: https://none.com/
+Author: Desq Tecnologia
+Author URI: https://www.desq.com.br/
+Description: A lightweight and fast WordPress theme
+Version: 1.0
+FASTra WordPress Theme, Copyright 2020 Desq Tecnologia.
+**/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: white;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===============================
+   Header Styles
+================================ */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.site-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.main-navigation {
+    text-align: right;
+}
+
+.main-navigation .nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu li a:hover {
+    color: #0073aa;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .main-navigation .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    .main-navigation .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+/* ===============================
+   Logo Styles
+================================ */
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Position */
+.header-logo.left {
+    justify-content: flex-start;
+}
+
+.header-logo.center {
+    justify-content: center;
+}
+
+.header-logo.right {
+    justify-content: flex-end;
+}
+
+/* Logo Sizes */
+.header-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjustments for Specific Sizes */
+.header-logo img.big {
+    width: 1000px;
+    height: 400px;
+}
+
+.header-logo img.medium {
+    width: 500px;
+    height: 200px;
+}
+
+.header-logo img.small {
+    width: 250px;
+    height: 100px;
+}
+
+.header-logo img.tiny {
+    width: 125px;
+    height: 50px;
+}
+
+/* Stretch Mode */
+.header-logo img.stretch {
+    object-fit: fill;
+}
+
+.header-logo img.keep {
+    object-fit: contain;
+}
+
+
+
+/* ===============================
+   Footer Styles
+================================ */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.site-footer .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-widgets {
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+/* ===============================
+   Main Content & Sidebar Styles
+================================ */
+.site-main {
+    padding: 40px 0;
+}
+
+.site-sidebar {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.widget {
+    margin-bottom: 20px;
+}
+
+.widget-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   Post Listing Styles
+================================ */
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.post-item {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.post-title a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.post-title a:hover {
+    color: #0073aa;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.post-excerpt {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease-in-out;
+}
+
+.read-more:hover {
+    background-color: #005177;
+}
+
+/* ===============================
+   Single Post Styles
+================================ */
+.site-single {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.single-post .post-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.single-post .post-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.post-content {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.post-navigation div {
+    font-size: 1rem;
+}
+
+.post-comments {
+    margin-top: 40px;
+}
+
+/* ===============================
+   Archive Page Styles
+================================ */
+.archive-page {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.archive-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.archive-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.archive-description {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* ===============================
+   Pagination Styles
+================================ */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    border: 1px solid #0073aa;
+    color: #0073aa;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background 0.3s ease-in-out;
+}
+
+.pagination a:hover {
+    background-color: #0073aa;
+    color: #fff;
+}
+
+/* ===============================
+   404 Page Styles
+================================ */
+.error-404 {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.not-found h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.not-found p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-back-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-back-home:hover {
+    background-color: #005177;
+}
+
+/* ===============================
+   WooCommerce Styles
+================================ */
+
+/* Layout principal da loja */
+.woocommerce-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Produtos */
+.woocommerce ul.products li.product {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.woocommerce ul.products li.product a {
+    text-decoration: none;
+    color: #333;
+}
+
+.woocommerce ul.products li.product h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.woocommerce ul.products li.product .price {
+    font-weight: bold;
+    color: #0073aa;
+}
+
+/* Botão de adicionar ao carrinho */
+.woocommerce ul.products li.product .button {
+    background-color: #0073aa;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.woocommerce ul.products li.product .button:hover {
+    background-color: #005177;
+}
+
+/* Carrinho e checkout */
+.woocommerce-cart-form,
+.woocommerce-checkout {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.woocommerce-cart .cart-collaterals {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Tamanhos da logo */
+.custom-logo {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Aplicando tamanhos definidos no Customizer */
+.custom-logo.big {
+    width: 500px !important;
+    height: 200px !important;
+}
+
+.custom-logo.medium {
+    width: 400px !important;
+    height: 160px !important;
+}
+
+.custom-logo.small {
+    width: 300px !important;
+    height: 120px !important;
+}
+
+.custom-logo.tiny {
+    width: 200px !important;
+    height: 80px !important;
+}
+
+/* ===============================
+   Contact Form Styles
+================================ */
+
+/* Estilização do formulário */
+.wpcf7-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização dos labels */
+.wpcf7-form label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Estilização dos inputs */
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Estilização da área de texto */
+.wpcf7-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Foco nos campos */
+.wpcf7-form input[type="text"]:focus,
+.wpcf7-form input[type="email"]:focus,
+.wpcf7-form textarea:focus {
+    border-color: #0073aa;
+    box-shadow: 0px 0px 5px rgba(0, 115, 170, 0.3);
+}
+
+/* Estilização do botão de envio */
+.wpcf7-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Efeito hover no botão */
+.wpcf7-form input[type="submit"]:hover {
+    background: #005177;
+}
+
+/* Espaçamento entre os campos */
+.wpcf7-form p {
+    margin-bottom: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .wpcf7-form {
+        width: 90%;
+    }
+}
+
+.full-width {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+
+.wp-block-media-text {
+    margin: 30px !important;
+}
