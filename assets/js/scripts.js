@@ -19,17 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Smooth Scroll to Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            const target = document.querySelector(this.getAttribute("href"));
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-        });
-    });
-
     // Lazy Loading Images
     const lazyImages = document.querySelectorAll("img[data-src]");
     const lazyLoad = target => {
@@ -47,21 +36,4 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     lazyImages.forEach(lazyLoad);
 
-    // Back to Top Button
-    const backToTop = document.createElement("button");
-    backToTop.classList.add("back-to-top");
-    backToTop.innerHTML = "↑";
-    document.body.appendChild(backToTop);
-
-    backToTop.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 300) {
-            backToTop.classList.add("visible");
-        } else {
-            backToTop.classList.remove("visible");
-        }
-    });
 });

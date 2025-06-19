@@ -1,6 +1,6 @@
 /**
 Theme Name: FASTra
-Theme URI: https://none.com/
+Theme URI: https://www.desq.com.br/
 Author: Desq Tecnologia
 Author URI: https://www.desq.com.br/
 Description: A lightweight and fast WordPress theme
@@ -399,66 +399,6 @@ body {
     background-color: #005177;
 }
 
-/* ===============================
-   WooCommerce Styles
-================================ */
-
-/* Layout principal da loja */
-.woocommerce-page {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Produtos */
-.woocommerce ul.products li.product {
-    text-align: center;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.woocommerce ul.products li.product a {
-    text-decoration: none;
-    color: #333;
-}
-
-.woocommerce ul.products li.product h2 {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-.woocommerce ul.products li.product .price {
-    font-weight: bold;
-    color: #0073aa;
-}
-
-/* Botão de adicionar ao carrinho */
-.woocommerce ul.products li.product .button {
-    background-color: #0073aa;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.woocommerce ul.products li.product .button:hover {
-    background-color: #005177;
-}
-
-/* Carrinho e checkout */
-.woocommerce-cart-form,
-.woocommerce-checkout {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.woocommerce-cart .cart-collaterals {
-    display: flex;
-    justify-content: space-between;
-}
-
 /* Tamanhos da logo */
 .custom-logo {
     width: auto !important;
@@ -485,87 +425,6 @@ body {
 .custom-logo.tiny {
     width: 200px !important;
     height: 80px !important;
-}
-
-/* ===============================
-   Contact Form Styles
-================================ */
-
-/* Estilização do formulário */
-.wpcf7-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilização dos labels */
-.wpcf7-form label {
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-/* Estilização dos inputs */
-.wpcf7-form input[type="text"],
-.wpcf7-form input[type="email"],
-.wpcf7-form textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: border 0.3s ease-in-out;
-}
-
-/* Estilização da área de texto */
-.wpcf7-form textarea {
-    resize: none;
-    height: 120px;
-}
-
-/* Foco nos campos */
-.wpcf7-form input[type="text"]:focus,
-.wpcf7-form input[type="email"]:focus,
-.wpcf7-form textarea:focus {
-    border-color: #0073aa;
-    box-shadow: 0px 0px 5px rgba(0, 115, 170, 0.3);
-}
-
-/* Estilização do botão de envio */
-.wpcf7-form input[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    background: #0073aa;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
-
-/* Efeito hover no botão */
-.wpcf7-form input[type="submit"]:hover {
-    background: #005177;
-}
-
-/* Espaçamento entre os campos */
-.wpcf7-form p {
-    margin-bottom: 15px;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-    .wpcf7-form {
-        width: 90%;
-    }
 }
 
 .full-width {

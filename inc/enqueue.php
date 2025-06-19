@@ -12,8 +12,7 @@ function fastra_enqueue_assets() {
     $theme_version = wp_get_theme()->get('Version');
 
     // Enqueue Styles
-    wp_enqueue_style('fastra-style', get_stylesheet_uri(), array(), $theme_version);
-    wp_enqueue_style('fastra-main', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0');
+    wp_enqueue_style('fastra-main', get_template_directory_uri() . '/style.css', array(), '1.0');
 
     // Enqueue Scripts
     wp_enqueue_script('fastra-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1.0', true);

@@ -8,7 +8,11 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+require_once get_template_directory() . '/inc/enqueue.php';
+
 require get_template_directory() . '/inc/customizer.php';
+
+
 
 // Theme setup
 function fastra_setup() {
@@ -24,19 +28,6 @@ function fastra_setup() {
     ));
 }
 add_action('after_setup_theme', 'fastra_setup');
-
-// Enqueue styles and scripts
-function fastra_enqueue_assets() {
-    // Parent theme stylesheet (Astra)
-    wp_enqueue_style('astra-parent', get_template_directory_uri() . '/style.css');
-
-    // Child theme stylesheet
-    wp_enqueue_style('fastra-style', get_stylesheet_uri(), array('astra-parent'), wp_get_theme()->get('Version'));
-
-    // Custom JS (only if needed)
-    wp_enqueue_script('fastra-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), null, true);
-}
-add_action('wp_enqueue_scripts', 'fastra_enqueue_assets');
 
 // Remove unnecessary WordPress bloat
 function fastra_cleanup() {
