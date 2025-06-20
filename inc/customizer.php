@@ -49,6 +49,31 @@ function fastra_customize_register($wp_customize) {
         'priority' => 35,
     ));
 
+    // Show Site Title Toggle
+    $wp_customize->add_setting('fastra_show_site_title', array(
+        'default'           => true,
+        'sanitize_callback' => 'wp_validate_boolean',
+    ));
+
+    $wp_customize->add_control('fastra_show_site_title', array(
+        'label'    => __('Display Site Title', 'fastra'),
+        'section'  => 'fastra_logo_settings',
+        'type'     => 'checkbox',
+    ));
+
+    // Logo Image Upload
+    $wp_customize->add_setting('fastra_logo_image', array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'fastra_logo_image', array(
+        'label'    => __('Upload Logo Image', 'fastra'),
+        'section'  => 'fastra_logo_settings',
+        'settings' => 'fastra_logo_image',
+    )));
+
+
     // Logo Size Option
     $wp_customize->add_setting('fastra_logo_size', array(
         'default'           => 'medium',

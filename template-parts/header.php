@@ -19,13 +19,16 @@ $logo_size = get_theme_mod('fastra_logo_size', 'tiny');
             <a href="<?php echo esc_url(home_url('/')); ?>" class="custom-logo-link">
                 <?php if (has_custom_logo()) : ?>
                     <?php
-                    $logo = wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full');
+                    //$logo = wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full');
+                    $logo_url = get_theme_mod('fastra_logo_image');
                     ?>
-                    <img src="<?php echo esc_url($logo[0]); ?>" 
+                    <img src="<?php echo esc_url($logo_url); ?>" 
                         class="custom-logo <?php echo esc_attr($logo_size); ?>" 
                         alt="<?php bloginfo('name'); ?>">
                 <?php endif; ?>
+                <?php if (get_theme_mod('fastra_show_site_title', true)) : ?>
                 <span class="site-title"><?php bloginfo('name'); ?></span>
+                <?php endif; ?>
             </a>
         </div>
 
