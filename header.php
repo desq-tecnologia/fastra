@@ -35,17 +35,8 @@ if (!defined('ABSPATH')) {
 </head>
 <body <?php body_class(); ?>>
 
-<?php
-// Hook for adding scripts or tracking codes after opening <body>
-do_action('wp_body_open');
-?>
+ <div class="site-container">
+   <div class="content-wrap">
+     <?php do_action('wp_body_open'); ?>
+	 <?php get_template_part('template-parts/header'); ?>
 
-<?php
-/**
-    * Load the modular header from template-parts/header.php
-    * This keeps the main header structured and modular
-    */
-get_template_part('template-parts/header');
-?>
-
-<main class="site-main">

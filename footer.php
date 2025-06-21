@@ -3,6 +3,7 @@
  * Footer template
  */
 ?>
+   </div> <?php /* <div class="content-wrap">  */ ?>
 
 <footer class="site-footer">
     <div class="container">
