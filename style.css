@@ -58,6 +58,40 @@ body {
     margin-left: 20px;
 }
 
+button .button-ok,
+.button-ok {
+    background: #0073aa !important; 
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 10px !important;
+    margin: 10px !important;
+    border: 0 !important;
+    border-width: 0 !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    font-family: "Segoe UI", sans-serif !important;    
+}
+.button-ok:hover{
+    background: #239cd3 !important; 
+}
+
+.button-cancel {
+    background: #00a32a !important; 
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 10px !important;
+    margin: 10px !important;
+    border: 0 !important;
+    border-width: 0 !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    font-family: "Segoe UI", sans-serif !important;
+}
+.button-cancel:hover{
+    background: #24b949 !important; 
+}
+
+
 .main-navigation .nav-menu {
     list-style: none;
     padding: 0;
